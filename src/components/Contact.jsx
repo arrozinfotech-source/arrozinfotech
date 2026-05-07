@@ -47,8 +47,18 @@ const contactItems = [
     className: 'linkedin-item',
     external: true,
   },
+   {
+    icon: '📸',
+    label: 'Instagram',
+    value: '@arrozinfotech',
+    href: 'https://www.instagram.com/arrozinfotech?igsh=Y2d1a3lvanZpMTh4',
+    className: 'instagram-item',
+    external: true,
+  },
+  { icon: '📍', label: 'Location', value: 'Chennai Tamil Nadu', href: null },
   { icon: '📍', label: 'Location',      value: 'Chennai Tamil Nadu',       href: null },
   { icon: '⏰', label: 'Response Time', value: '24–48 hours', href: null },
+  
 ];
 
 const Contact = () => {
@@ -101,6 +111,7 @@ const Contact = () => {
       setTimeout(() => setStatus('idle'), 5000);
     }
   };
+  
 
   return (
     <section id="contact" className="contact" ref={sectionRef}>

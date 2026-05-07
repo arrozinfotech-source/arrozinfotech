@@ -243,3 +243,9 @@
 @media (max-width: 480px) {
   .contact-form { padding: 1.5rem 1.25rem; }
 }
+.whatsapp-item:hover  { border-color: #25D366; box-shadow: 0 0 16px rgba(37,211,102,0.15); }
+.linkedin-item:hover  { border-color: #0A66C2; box-shadow: 0 0 16px rgba(10,102,194,0.15); }
+.instagram-item:hover { border-color: #E1306C; box-shadow: 0 0 16px rgba(225,48,108,0.15); }
+.whatsapp-item  .c-link { color: #25D366; }
+.linkedin-item  .c-link { color: #4D9FEB; }
+.instagram-item .c-link { color: #E1306C; }
