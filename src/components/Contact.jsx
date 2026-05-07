@@ -55,7 +55,6 @@ const contactItems = [
     className: 'instagram-item',
     external: true,
   },
-  { icon: '📍', label: 'Location', value: 'Chennai Tamil Nadu', href: null },
   { icon: '📍', label: 'Location',      value: 'Chennai Tamil Nadu',       href: null },
   { icon: '⏰', label: 'Response Time', value: '24–48 hours', href: null },
   
