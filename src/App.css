@@ -1,0 +1,34 @@
+/* ============================================
+   APP STYLES
+   ============================================ */
+
+.App {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* ============================================
+   LINK STYLES
+   ============================================ */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ============================================
+   ANIMATIONS FOR LAZY LOADING
+   ============================================ */
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

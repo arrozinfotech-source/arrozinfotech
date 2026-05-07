@@ -1,0 +1,443 @@
+/* ============================================
+   SERVICES SECTION
+   ============================================ */
+
+.services {
+  background: linear-gradient(
+    180deg,
+    var(--bg-primary) 0%,
+    rgba(123, 47, 247, 0.05) 50%,
+    var(--bg-primary) 100%
+  );
+  position: relative;
+}
+
+/* ============================================
+   SERVICES GRID
+   ============================================ */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   SERVICE CARD
+   ============================================ */
+
+.service-card {
+  padding: var(--spacing-xl);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  cursor: pointer;
+  animation: fadeInUp 0.8s ease-out backwards;
+  height: 100%;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(123, 47, 247, 0) 0%,
+    rgba(241, 7, 163, 0) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+}
+
+.service-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(123, 47, 247, 0.5);
+  transform: translateY(-8px);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* ============================================
+   SERVICE ICON
+   ============================================ */
+
+.service-icon {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: rgba(123, 47, 247, 0.1);
+  border: 2px solid rgba(123, 47, 247, 0.3);
+  border-radius: 12px;
+  transition: all var(--transition-normal);
+}
+
+.service-card:hover .service-icon {
+  background: rgba(241, 7, 163, 0.2);
+  border-color: rgba(241, 7, 163, 0.5);
+  transform: rotate(5deg) scale(1.1);
+  box-shadow: 0 0 20px rgba(123, 47, 247, 0.4);
+}
+
+/* ============================================
+   SERVICE CONTENT
+   ============================================ */
+
+.service-card h3 {
+  color: var(--text-primary);
+  margin: 0;
+  font-size: 1.35rem;
+  z-index: 1;
+  position: relative;
+}
+
+.service-description {
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+  z-index: 1;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ============================================
+   FEATURE TAGS
+   ============================================ */
+
+.service-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  z-index: 1;
+  position: relative;
+}
+
+.feature-tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: rgba(123, 47, 247, 0.15);
+  color: #B8B8FF;
+  border: 1px solid rgba(123, 47, 247, 0.3);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all var(--transition-normal);
+}
+
+.service-card:hover .feature-tag {
+  background: rgba(241, 7, 163, 0.15);
+  border-color: rgba(241, 7, 163, 0.3);
+  color: #FF66FF;
+}
+
+/* ============================================
+   GLOW EFFECT
+   ============================================ */
+
+.service-hover-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(123, 47, 247, 0.3) 0%,
+    transparent 70%
+  );
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.service-card:hover .service-hover-glow {
+  opacity: 1;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .service-card {
+    padding: var(--spacing-lg);
+  }
+
+  .service-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 2.5rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: var(--spacing-lg);
+  }
+}
+.services {
+  background: linear-gradient(
+    180deg,
+    var(--bg-primary) 0%,
+    rgba(123, 47, 247, 0.06) 50%,
+    var(--bg-primary) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+/* faint grid lines in background */
+.services::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(123,47,247,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(123,47,247,0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* ============================================
+   GRID  (4 col → 2 col → 1 col)
+   ============================================ */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1200px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .services-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   SERVICE CARD — base state (hidden)
+   ============================================ */
+
+.service-card {
+  padding: 1.75rem 1.5rem;
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+
+  /* Scroll-reveal: starts invisible + offset */
+  opacity: 0;
+  transform: translateY(48px);
+  transition:
+    opacity  0.65s cubic-bezier(0.23,1,0.32,1) var(--card-delay, 0ms),
+    transform 0.65s cubic-bezier(0.23,1,0.32,1) var(--card-delay, 0ms),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.service-card.slide-left  { transform: translateX(-48px) translateY(24px); }
+.service-card.slide-right { transform: translateX( 48px) translateY(24px); }
+
+/* VISIBLE — triggered by IntersectionObserver */
+.service-card.visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+/* HOVER */
+.service-card:hover {
+  background: rgba(255,255,255,0.09) !important;
+  border-color: var(--glow-color, #7B2FF7) !important;
+  box-shadow:
+    0 0 0 1px var(--glow-color, #7B2FF7),
+    0 20px 50px rgba(0,0,0,0.35),
+    0 0 40px color-mix(in srgb, var(--glow-color, #7B2FF7) 30%, transparent);
+  transform: translateY(-8px) !important;
+}
+
+/* ============================================
+   ICON
+   ============================================ */
+
+.service-icon-wrap {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.service-icon {
+  font-size: 2.25rem;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.35s ease;
+}
+
+.icon-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: rgba(123,47,247,0.12);
+  border: 2px solid rgba(123,47,247,0.28);
+  transition: all 0.35s ease;
+}
+
+.service-card:hover .service-icon { transform: scale(1.2) rotate(8deg); }
+.service-card:hover .icon-ring {
+  background: color-mix(in srgb, var(--glow-color, #7B2FF7) 18%, transparent);
+  border-color: var(--glow-color, #7B2FF7);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--glow-color, #7B2FF7) 35%, transparent);
+}
+
+/* ============================================
+   CARD TEXT
+   ============================================ */
+
+.service-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.3;
+  position: relative;
+  z-index: 1;
+}
+
+.service-description {
+  font-size: 0.875rem;
+  color: var(--text-secondary, #B8B8C4);
+  line-height: 1.65;
+  margin: 0;
+  flex-grow: 1;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   FEATURE TAGS
+   ============================================ */
+
+.service-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-tag {
+  display: inline-block;
+  padding: 0.3rem 0.65rem;
+  background: rgba(123,47,247,0.14);
+  color: #C4AAFF;
+  border: 1px solid rgba(123,47,247,0.28);
+  border-radius: 6px;
+  font-size: 0.73rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .feature-tag {
+  background: color-mix(in srgb, var(--glow-color, #7B2FF7) 18%, transparent);
+  border-color: color-mix(in srgb, var(--glow-color, #7B2FF7) 50%, transparent);
+  color: #fff;
+}
+
+/* ============================================
+   DECORATIVE GLOW + SHINE
+   ============================================ */
+
+.card-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 110%,
+    color-mix(in srgb, var(--glow-color, #7B2FF7) 22%, transparent) 0%,
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.service-card:hover .card-glow { opacity: 1; }
+
+/* animated border shine on hover */
+.card-border-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--glow-color, #7B2FF7), transparent);
+  transition: left 0.6s ease;
+  border-radius: 2px;
+}
+
+.service-card:hover .card-border-shine { left: 140%; }
+
+/* ============================================
+   NUMBER BADGE
+   ============================================ */
+
+.service-card::after {
+  content: attr(data-num);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.1);
+  letter-spacing: 1px;
+}
