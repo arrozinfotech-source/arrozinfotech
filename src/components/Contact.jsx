@@ -18,7 +18,7 @@ const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // ← replace
 const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // ← replace
 const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // ← replace
 
-const WHATSAPP_NUMBER = '917397551808';
+const WHATSAPP_NUMBER = '917358201808';
 const WHATSAPP_MSG    = encodeURIComponent(
   'Hi Arroz Infotech! I would like to know more about your services.'
 );
