@@ -34,7 +34,7 @@ const contactItems = [
   {
     icon: '💬',
     label: 'WhatsApp',
-    value: '+91 7397551808',
+    value: '+91 7358201808',
     href: `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`,
     className: 'whatsapp-item',
     external: true,
