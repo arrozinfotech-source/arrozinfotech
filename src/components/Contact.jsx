@@ -13,7 +13,7 @@ import './Contact.css';
   ║  5. npm install @emailjs/browser                    ║
   ║  6. Paste your keys in the 3 constants below        ║
   ╚══════════════════════════════════════════════════════╝
-*/
+*/ 
 const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // ← replace
 const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // ← replace
 const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // ← replace

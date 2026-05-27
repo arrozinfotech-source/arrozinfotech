@@ -9,20 +9,7 @@ const Team = () => {
       description: 'Visionary leader driving innovation and business strategy',
       icon: '👨‍💼',
     },
-    {
-      id: 2,
-      name: 'Purushothaman R',
-      role: 'Co-Founder',
-      description: 'Operations expert ensuring seamless execution',
-      icon: '👨‍💼',
-    },
-    {
-      id: 3,
-      name: 'Manikandan',
-      role: 'Co-Founder ',
-      description: 'Technical visionary architecting robust solutions',
-      icon: '👨‍💻',
-    },
+    
   ];
 
   const linkedinCompanyUrl = 'https://www.linkedin.com/in/arroz-infotech-7230a5408';
