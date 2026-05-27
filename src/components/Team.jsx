@@ -12,7 +12,7 @@ const Team = () => {
     
   ];
 
-  const linkedinCompanyUrl = 'https://www.linkedin.com/in/arroz-infotech-7230a5408';
+  const linkedinCompanyUrl = 'www.linkedin.com/in/prince-r-74684128a';
 
   const handleLinkedInClick = () => {
     window.open(linkedinCompanyUrl, '_blank', 'noopener,noreferrer');
